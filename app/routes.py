@@ -12,7 +12,6 @@ from app.models import User
 def index():
     context = {
         'title': 'Home',
-        'username': 'Victor',  # Mock user
         'posts': [
             {
                 'author': {'username': 'Jhon'},
