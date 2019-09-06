@@ -11,6 +11,10 @@ class User(UserMixin, db.Model):
     password_hash = db.Column(db.String(128))
     posts = db.relationship('Post', backref='author', lazy='dynamic') #Here Post refers to Classname
 
+    def __init__(self, username, email):
+        self.username = username
+        self.email = email
+
     def __repr__(self):
         return '<User {}>'.format(self.username)
 
